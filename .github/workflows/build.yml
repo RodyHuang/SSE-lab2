@@ -25,5 +25,5 @@ jobs:
         uses: /impaas/impaas-deploy@v3
         with:
           app-name: rh624-sse-app
-          deplyment-token: ${{ secrets.IMPAAS_DEPLOY_TOKEN }}
+          deployment-token: ${{ secrets.IMPAAS_DEPLOY_TOKEN }}
           method: PLATFORM
