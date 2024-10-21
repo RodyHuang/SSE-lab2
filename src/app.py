@@ -10,6 +10,7 @@ def process_query(query):
     else:
         return "Unknown"
 
+
 @app.route("/")
 def hello_world():
     return render_template("index.html")
@@ -21,6 +22,7 @@ def submit():
     input_age = request.form.get("age")
     return render_template("hello.html", name=input_name, age=input_age)
 
+
 @app.route('/query', methods=['GET'])
 def query():
     q = request.args.get('q')
@@ -28,6 +30,7 @@ def query():
         return "Query parameter 'q' is required", 400
     result = process_query(q)
     return result, 200
+
 
 if __name__ == '__main__':
     app.run()
